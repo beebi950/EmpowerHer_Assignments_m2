@@ -18,9 +18,13 @@ function Prime(num) {
 
 Prime(num); 
 
-//check prime 
+//check EvenOdd
 
-
+if(num%2==0){
+    console.log("Even")
+}else{
+    console.log("Odd")
+}
 
 
 
