@@ -16,7 +16,7 @@ function Prime(num) {
     }
 }
 
-Prime(num); 
+console.log(Prime(num)); 
 
 //check EvenOdd
 

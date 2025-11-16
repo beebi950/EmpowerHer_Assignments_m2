@@ -1,0 +1,49 @@
+.navigationBar{
+    display: flex;
+    background-color:white;
+    overflow: hidden;
+    color: blue;
+    display: flex;
+    padding: 20px;
+}
+.ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+}
+.li{
+    float:left;
+}
+button{
+    background-color: red;
+    color:white;
+    padding:20px;
+
+}
+.sector{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:15px;
+    padding:20px;
+    background-color: red;
+    
+}
+.selector > .item{
+    border: 1px solid black;
+    text-align:center;
+    padding:10px;
+    grid-column: 200px 200px 200px;
+    grid-row: 200px 200px 200px;
+    gap: 10px;
+    padding:10px;
+    background-color: rgb(203, 197, 197);
+}
+.image{
+    width:100%;
+    height:auto;
+    border-radius: 50%;
+    max-width: 100px;
+}
