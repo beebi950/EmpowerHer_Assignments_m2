@@ -1,84 +1,66 @@
-
-// Question 1: Closure Counter
-
-
-// createCounter uses a closure to store a private count variable
 function createCounter() {
-    let count = 0; // private variable
+    let count = 0;
 
     return {
-        // increases count
         increment: function () {
             count++;
             console.log("Current count:", count);
         },
-        // decreases count
         decrement: function () {
             count--;
             console.log("Current count:", count);
         },
-        // displays count
-        getCount: function () {
+        showCount: function () {
             console.log("Current count:", count);
         }
     };
 }
-
 
 const counter1 = createCounter();
 counter1.increment();
 counter1.increment();
 counter1.decrement();
 
-// Creating another counter shows separate private values
 const counter2 = createCounter();
 counter2.increment();
+counter2.decrement();
+counter1.showCount();
 
 
 
-// Question 2: Bank Account Closures
-
-
-// createBankAccount uses closures to keep balance and history private
 function createBankAccount() {
-    let balance = 0; // private variable
-    let transactionHistory = []; // private history
+    let balance = 0;
+    let transactionHistory = [];
 
     return {
-        // deposit money and record transaction
         deposit: function (amount) {
             balance += amount;
             transactionHistory.push(`Deposited: ${amount}`);
-            console.log(`Deposited: ${amount}`);
+            console.log("Deposited:", amount);
         },
-        // withdraw money only if balance is enough
         withdraw: function (amount) {
             if (amount > balance) {
-                transactionHistory.push(`Failed withdrawal: ${amount}`);
                 console.log("Insufficient balance");
+                transactionHistory.push(`Failed withdrawal: ${amount}`);
             } else {
                 balance -= amount;
                 transactionHistory.push(`Withdrawn: ${amount}`);
-                console.log(`Withdrawn: ${amount}`);
+                console.log("Withdrawn:", amount);
             }
         },
-        // check current balance
-        getBalance: function () {
-            console.log("Current balance:", balance);
+        checkBalance: function () {
+            console.log("Current Balance:", balance);
         },
-        // view transaction history
         getHistory: function () {
             console.log("Transaction History:", transactionHistory);
         }
     };
 }
 
-
 const account = createBankAccount();
 account.deposit(500);
 account.withdraw(200);
 account.withdraw(400);
-account.getBalance();
+account.checkBalance();
 account.getHistory();
-
-console.log(account.balance); // undefined
+console.log(account.balance);
