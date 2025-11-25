@@ -1,13 +1,16 @@
 let age = 20;
 
 function displayAge() {
-    console.log("Age:", age);
+    console.log("Displayed Age:", age);
 }
 
 function changeAge() {
-    age = 25;
+    age++;
+    console.log("Changed Age:", age);
 }
 
 displayAge();
 changeAge();
+
 displayAge();
+changeAge();
