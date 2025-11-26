@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic DOM Manipulation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Item List</h2>
+
+    <ul id="itemList">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ul>
+
+    <button id="addBtn">Add Item</button>
+
+    <script>
+        const ul = document.querySelector("#itemList");
+        const button = document.getElementById("addBtn");
+
+        button.addEventListener("click", function () {
+            const count = ul.children.length + 1;
+            const li = document.createElement("li");
+            li.textContent = "New Item " + count;
+
+            if (count % 2 === 1) {
+                li.style.fontWeight = "bold";
+                li.style.color = "blue";
+            } else {
+                li.style.fontStyle = "italic";
+                li.style.color = "red";
+            }
+
+            ul.appendChild(li);
+        });
+    </script>
+
+</body>
+</html>
