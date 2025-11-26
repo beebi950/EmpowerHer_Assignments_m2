@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Understanding</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- H1 with ID -->
+    <h1 id="mainHeading">Original Heading</h1>
+
+    <!-- Multiple Paragraphs -->
+    <p>This is paragraph 1.</p>
+    <p>This is paragraph 2.</p>
+    <p>This is paragraph 3.</p>
+
+    <!-- Div with class container -->
+    <div class="container" style="padding: 15px; margin-top: 10px;">
+        This is a container div.
+    </div>
+
+    
+    <script>
+        // 1. Select <h1> by id and change text
+        const heading = document.getElementById("mainHeading");
+        heading.textContent = "Welcome to the DOM World!";
+
+        // 2. Select all <p> elements & change their color to blue
+        const paragraphs = document.getElementsByTagName("p");
+        for (let p of paragraphs) {
+            p.style.color = "blue";
+        }
+
+        // 3. Select first <div> with class 'container' & change background color
+        const containerDiv = document.querySelector(".container");
+        containerDiv.style.backgroundColor = "yellow";
+    </script>
+
+</body>
+</html>
