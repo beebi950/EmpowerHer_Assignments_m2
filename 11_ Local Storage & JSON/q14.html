@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta.name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L1 - Enhanced Todo List</title>
+    <style>
+        .completed {
+            text-decoration: line-through;
+            color: gray;
+        }
+        .task {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 6px;
+            border: 1px solid #ddd;
+            margin: 5px 0;
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Enhanced Todo List with localStorage and Search</h2>
+
+    <!-- Search Bar -->
+    <input type="text" id="searchBar" placeholder="Search tasks...">
+    <br><br>
+
+    <!-- Input to add tasks -->
+    <input type="text" id="taskInput" placeholder="Enter a task">
+    <button id="addBtn">Add Task</button>
+
+    <h3>Tasks:</h3>
+    <div id="taskList"></div>
+
+    <script src="q14.js"></script>
+</body>
+</html>
